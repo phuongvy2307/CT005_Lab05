@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lab5_Ex3.1 – Trang HTML hiển thị nội dung đa phương tiện</title>
+  <meta
+    name="description"
+    content="Infographic và video giới thiệu lợi ích của công nghệ số trong học tập."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #f2f9fc;
+      color: #07386b;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      width: min(100%, 900px);
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      text-align: center;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+
+    .description {
+      margin: 0 0 28px;
+      color: #365b7d;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .infographic {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 36px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgb(7 56 107 / 12%);
+    }
+
+    .video-section {
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgb(7 56 107 / 10%);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      text-align: center;
+      font-size: clamp(1.3rem, 4vw, 2rem);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: #5b7185;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Lợi ích của công nghệ số trong học tập</h1>
+      <p class="description">
+        Khám phá cách công nghệ số giúp mở rộng kiến thức, học tập linh hoạt
+        và tăng hứng thú trong quá trình học.
+      </p>
+    </header>
+
+    <img
+      class="infographic"
+      src="Lab05_Ex2.1.png.png"
+      alt="Infographic trình bày lợi ích của công nghệ số trong học tập"
+    >
+
+    <section class="video-section" aria-labelledby="video-title">
+      <h2 id="video-title">Video liên quan</h2>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/C17i2EHHX6Y"
+          title="Video về lợi ích của công nghệ số trong học tập"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <footer>
+      <p>Infographic và video thuộc quyền của tác giả hoặc chủ sở hữu tương ứng.</p>
+      <p><strong>Lab5_Ex3.1</strong> – Trang HTML hiển thị nội dung đa phương tiện</p>
+      <p>Nguồn thực hiện: hỗ trợ bởi AI / GitHub Copilot</p>
+    </footer>
+  </main>
+</body>
+</html>
