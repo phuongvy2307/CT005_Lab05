@@ -28,10 +28,27 @@
       margin: 0 auto;
     }
 
+    .profile-section,
+    .content-section,
+    .video-section {
+      margin-top: 24px;
+      padding: 24px;
+      background: #fff;
+      border: 1px solid #d9e8f0;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgb(7 56 107 / 8%);
+    }
+
     h1 {
       margin: 0 0 12px;
       text-align: center;
       font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      text-align: center;
+      font-size: clamp(1.3rem, 4vw, 2rem);
     }
 
     .description {
@@ -41,26 +58,64 @@
       text-align: center;
     }
 
+    .profile-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin: 0;
+    }
+
+    .profile-details div {
+      padding: 14px 16px;
+      background: #f2f9fc;
+      border-radius: 8px;
+    }
+
+    .profile-details dt {
+      margin-bottom: 4px;
+      color: #5b7185;
+      font-size: 0.9rem;
+    }
+
+    .profile-details dd {
+      margin: 0;
+      color: #07386b;
+      font-weight: 700;
+    }
+
     .infographic {
       display: block;
       width: 100%;
       height: auto;
-      margin: 0 auto 36px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgb(7 56 107 / 12%);
+      margin: 0 auto;
+      border-radius: 8px;
     }
 
-    .video-section {
-      padding: 24px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgb(7 56 107 / 10%);
+    .pdf-wrapper {
+      width: 100%;
+      height: min(75vh, 720px);
+      min-height: 420px;
+      overflow: hidden;
+      border: 1px solid #d9e8f0;
+      border-radius: 8px;
+      background: #f2f9fc;
     }
 
-    h2 {
-      margin: 0 0 18px;
+    .pdf-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .pdf-fallback {
+      margin: 12px 0 0;
+      color: #365b7d;
       text-align: center;
-      font-size: clamp(1.3rem, 4vw, 2rem);
+    }
+
+    .pdf-fallback a {
+      color: #075e9c;
+      font-weight: 700;
     }
 
     .video-wrapper {
@@ -97,18 +152,53 @@
 <body>
   <main>
     <header>
-      <h1>Lợi ích của công nghệ số trong học tập</h1>
+      <h1>Thông tin cá nhân</h1>
       <p class="description">
-        Khám phá cách công nghệ số giúp mở rộng kiến thức, học tập linh hoạt
-        và tăng hứng thú trong quá trình học.
+        Trang giới thiệu bản thân và các nội dung đa phương tiện trong bài thực hành.
       </p>
     </header>
 
-    <img
-      class="infographic"
-      src="Lab05_Ex2.1.png.png"
-      alt="Infographic trình bày lợi ích của công nghệ số trong học tập"
-    >
+    <section class="profile-section" aria-labelledby="profile-title">
+      <h2 id="profile-title">Hồ sơ sinh viên</h2>
+      <dl class="profile-details">
+        <div>
+          <dt>Họ tên</dt>
+          <dd>Nguyễn Phương Vy</dd>
+        </div>
+        <div>
+          <dt>MSSV</dt>
+          <dd>B2605843</dd>
+        </div>
+        <div>
+          <dt>Lớp học phần</dt>
+          <dd>CT005D06</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="content-section" aria-labelledby="image-title">
+      <h2 id="image-title">Sản phẩm hình ảnh</h2>
+      <img
+        class="infographic"
+        src="Lab05_Ex2.1.png.png"
+        alt="Sản phẩm hình ảnh của bài thực hành"
+      >
+    </section>
+
+    <section class="content-section" aria-labelledby="pdf-title">
+      <h2 id="pdf-title">Tài liệu PDF</h2>
+      <div class="pdf-wrapper">
+        <iframe
+          src="Lab05_Ex1.2.pdf.pdf"
+          title="Tài liệu PDF Lab05 Ex1.2"
+          loading="lazy">
+        </iframe>
+      </div>
+      <p class="pdf-fallback">
+        Nếu tài liệu không hiển thị,
+        <a href="Lab05_Ex1.2.pdf.pdf" target="_blank" rel="noopener">mở PDF tại đây</a>.
+      </p>
+    </section>
 
     <section class="video-section" aria-labelledby="video-title">
       <h2 id="video-title">Video liên quan</h2>
